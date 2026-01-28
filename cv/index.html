@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ================= META ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV | Carlos Eduardo Martínez Morales</title>
+
+    <!-- ================= CSS ================= -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ================= GOOGLE FONTS ================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- ================= FONT AWESOME ================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ================= EMAILJS ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init("6vuDY9WSW6-dLFQhG"); /* Public Key */
+    </script>
+</head>
+
+<body>
+
+<div class="cv-wrapper fade-in">
+
+    <!-- ===== PANEL IZQUIERDO ===== -->
+    <aside class="left-panel slide-in-left">
+
+        <!-- FOTO -->
+        <div class="profile-photo">
+            <img src="/cv/src/carloseduardo.jpg" alt="Carlos Eduardo Martínez Morales">
+        </div>
+
+        <!-- BOTÓN CONTACTO -->
+        <button id="openModal" class="contact-btn">📩 Contactar</button>
+
+        <!-- CONTACTO -->
+        <section class="panel-section">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-phone"></i> 5636249330</p>
+            <p><i class="fas fa-envelope"></i> carlosmit465@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Huehuetoca, Santa Teresa 3<br>Lenteja Sur 7C</p>
+        </section>
+
+        <!-- HABILIDADES -->
+        <section class="panel-section">
+            <h3>Habilidades</h3>
+            <ul>
+                <li><i class="fas fa-users"></i> Trabajo en equipo</li>
+                <li><i class="fas fa-comments"></i> Comunicación efectiva</li>
+                <li><i class="fas fa-brain"></i> Facilidad de aprendizaje</li>
+                <li><i class="fas fa-puzzle-piece"></i> Resolución de problemas</li>
+                <li><i class="fas fa-chart-bar"></i> Análisis</li>
+            </ul>
+        </section>
+
+    </aside>
+
+    <!-- ===== PANEL DERECHO ===== -->
+    <main class="right-panel slide-in-right">
+
+        <header class="main-header">
+            <h1>Carlos Eduardo<br>Martínez Morales</h1>
+            <h2>Pasante en Ingeniería en Sistemas</h2>
+        </header>
+
+        <section class="content-section">
+            <h3>Perfil profesional</h3>
+            <p>
+                Estudiante de Ingeniería en Sistemas Computacionales próximo a egresar,
+                con conocimientos en programación, desarrollo web y administración básica
+                de sistemas Linux. Interesado en iniciar mi carrera profesional en TI,
+                aportando compromiso y capacidad de aprendizaje.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h3>Educación</h3>
+            <p><strong>Universidad Bancaria de México</strong> — 2023 / Actualidad</p>
+            <p>
+                Ingeniería en Sistemas Computacionales (UBAM, Teoloyucan),
+                formación en desarrollo de software, redes y sistemas distribuidos.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h3>Habilidades técnicas</h3>
+            <ul>
+                <li><i class="fas fa-code"></i> C, C++, C#, Java, JavaScript</li>
+                <li><i class="fab fa-html5"></i> HTML, CSS, Node.js</li>
+                <li><i class="fab fa-linux"></i> Linux (experiencia) · BSD (básico)</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h3>Experiencia</h3>
+            <p><strong>Prácticas — DIF Teoloyucan</strong></p>
+            <p>
+                Gestión administrativa, control de expedientes, reportes,
+                atención ciudadana y organización de apoyos sociales.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h3>Proyectos</h3>
+            <p><strong>API de Prueba</strong></p>
+            <p>
+                Un proyecto de API simple desarrollado para fines de prueba y demostración de habilidades en desarrollo web.
+                <br>
+                <i class="fab fa-github"></i> <a href="https://github.com/jr-0205/api-prueba" target="_blank">Repositorio en GitHub</a>
+                <br>
+                <i class="fas fa-external-link-alt"></i> <a href="https://api-prueba-9hox.onrender.com" target="_blank">Zona de prueba (Deploy en Render)</a>
+            </p>
+            <p>
+                Este proyecto utiliza tecnologías como JavaScript, HTML y CSS, y sirve como ejemplo de una API básica deployada en la nube.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<!-- ================= MODAL CONTACTO ================= -->
+<div id="contactModal" class="modal">
+    <div class="modal-content modal-appear">
+        <span class="close" id="closeModal">&times;</span>
+        <h3>Contacto</h3>
+
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Nombre completo" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="text" name="subject" placeholder="Asunto" required>
+            <textarea name="message" placeholder="Mensaje" required></textarea>
+
+            <button type="submit" id="submitBtn">Enviar mensaje</button>
+        </form>
+
+        <div id="formResponse"></div>
+    </div>
+</div>
+
+<script src="javascript.js"></script>
+</body>
+</html>

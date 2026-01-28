@@ -1,0 +1,302 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    background: #0d0f14; /* fondo oscuro real */
+    color: #e6e6e6;
+}
+
+/* ================= CONTENEDOR ================= */
+.cv-wrapper {
+    max-width: 1100px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    background: #151922;
+    border-radius: 20px; /* Más redondeado para menos "cuadrado" */
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes modalAppear {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.modal-appear {
+    animation: modalAppear 0.3s ease-out forwards;
+}
+
+/* ================= PANEL IZQUIERDO ================= */
+.left-panel {
+    background: linear-gradient(180deg, #111827, #020617);
+    padding: 35px 25px;
+}
+
+/* ===== FOTO PERFIL ===== */
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05); /* Animación de zoom en hover */
+}
+
+.profile-photo img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+    background-color: #000;
+}
+
+/* ================= SECCIONES PANEL ================= */
+.panel-section {
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.panel-section:hover {
+    transform: translateY(-5px); /* Elevación sutil en hover */
+}
+
+.panel-section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(56,189,248,0.4);
+    padding-bottom: 6px;
+}
+
+.panel-section p,
+.panel-section li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #d1d5db;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio para íconos */
+}
+
+.panel-section ul {
+    list-style: none;
+}
+
+/* ================= PANEL DERECHO ================= */
+.right-panel {
+    padding: 45px;
+    background: #151922;
+}
+
+/* HEADER */
+.main-header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: 1px;
+}
+
+.main-header h2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #94a3b8;
+    margin-bottom: 35px;
+}
+
+/* ================= CONTENIDO ================= */
+.content-section {
+    margin-bottom: 35px;
+    transition: transform 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-5px); /* Elevación sutil en hover */
+}
+
+.content-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.content-section p,
+.content-section li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio para íconos */
+}
+
+.content-section ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.content-section a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.content-section a:hover {
+    color: #0ea5e9;
+    text-decoration: underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .cv-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .left-panel,
+    .right-panel {
+        padding: 30px;
+    }
+
+    .profile-photo img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+/* ================= BOTÓN CONTACTO ================= */
+.contact-btn {
+    width: 100%;
+    margin: 15px 0 30px;
+    padding: 12px;
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    border: none;
+    color: #020617;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(56,189,248,0.4);
+}
+
+/* ================= MODAL ================= */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(2,6,23,0.8);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: #020617;
+    color: #e5e7eb;
+    width: 340px;
+    margin: 8% auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+}
+
+.modal-content h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: #94a3b8;
+    transition: color 0.2s;
+}
+
+.close:hover {
+    color: #38bdf8;
+}
+
+/* ================= FORM ================= */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #020617;
+    border: 1px solid #334155;
+    color: #e5e7eb;
+    border-radius: 6px;
+    transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #38bdf8;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+    height: 90px;
+}
+
+#submitBtn {
+    background: #38bdf8;
+    color: #020617;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#submitBtn:hover {
+    background: #0ea5e9;
+}
+
+#formResponse {
+    margin-top: 10px;
+    font-size: 14px;
+}
