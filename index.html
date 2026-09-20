@@ -1,146 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <!-- ================= META ================= -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV | Carlos Eduardo Martínez Morales</title>
-
-    <!-- ================= CSS ================= -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- ================= GOOGLE FONTS ================= -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <!-- ================= FONT AWESOME ================= -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- ================= EMAILJS ================= -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        emailjs.init("6vuDY9WSW6-dLFQhG"); /* Public Key */
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#08090a">
+  <meta name="description" content="Portafolio de Carlos Eduardo Martínez Morales: desarrollo de software, APIs, aplicaciones de escritorio, herramientas web y proyectos con Java, .NET, Node.js y TypeScript.">
+  <title>Carlos Eduardo Martínez Morales · Software & Systems</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+  <script src="javascript.js" defer></script>
 </head>
-
 <body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>CE / SYSTEMS</span>
+    </a>
 
-<div class="cv-wrapper fade-in">
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#perfil">Perfil</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <button type="button" class="nav-action" data-open-contact>Contacto</button>
+    </nav>
+  </header>
 
-    <!-- ===== PANEL IZQUIERDO ===== -->
-    <aside class="left-panel slide-in-left">
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">INGENIERÍA EN SISTEMAS · DESARROLLO DE SOFTWARE</p>
+        <h1>Carlos Eduardo<br><span>Martínez Morales</span></h1>
+        <p class="hero-lead">
+          Construyo software que conecta producto y sistemas: aplicaciones de escritorio,
+          APIs, herramientas web y utilidades para entornos Windows y Minecraft.
+        </p>
 
-        <!-- FOTO -->
-        <div class="profile-photo">
-            <img src="./src/carloseduardo.jpg" alt="Carlos Eduardo Martínez Morales">
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/jr-0205" target="_blank" rel="noopener noreferrer">Ver GitHub</a>
+          <button type="button" class="button button-secondary" data-open-contact>Contactar</button>
         </div>
 
-        <!-- BOTÓN CONTACTO -->
-        <button id="openModal" class="contact-btn">📩 Contactar</button>
+        <div class="hero-meta" aria-label="Resumen técnico">
+          <div>
+            <strong>10</strong>
+            <span>repositorios públicos</span>
+          </div>
+          <div>
+            <strong>.NET · Node · Java</strong>
+            <span>stack principal visible</span>
+          </div>
+          <div>
+            <strong>Desktop · API · Web</strong>
+            <span>áreas de trabajo</span>
+          </div>
+        </div>
+      </div>
 
-        <!-- CONTACTO -->
-        <section class="panel-section">
-            <h3>Contacto</h3>
-            <p><i class="fas fa-phone"></i> 5636249330</p>
-            <p><i class="fas fa-envelope"></i> carlosmit465@gmail.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Huehuetoca, Santa Teresa 3<br>Lenteja Sur 7C</p>
-        </section>
+      <aside class="identity-panel" aria-label="Identidad profesional">
+        <div class="profile-photo">
+          <img src="./src/carloseduardo.jpg" alt="Carlos Eduardo Martínez Morales">
+        </div>
+        <div class="identity-copy">
+          <span class="status-dot"><i aria-hidden="true"></i> Portafolio activo</span>
+          <h2>Software Developer</h2>
+          <p>Estado de México, México</p>
+        </div>
+        <dl class="identity-list">
+          <div><dt>Enfoque</dt><dd>Backend, desktop y herramientas</dd></div>
+          <div><dt>Formación</dt><dd>Ingeniería en Sistemas Computacionales</dd></div>
+          <div><dt>Interés</dt><dd>Software claro, útil y mantenible</dd></div>
+        </dl>
+      </aside>
+    </section>
 
-        <!-- HABILIDADES -->
-        <section class="panel-section">
-            <h3>Habilidades</h3>
-            <ul>
-                <li><i class="fas fa-users"></i> Trabajo en equipo</li>
-                <li><i class="fas fa-comments"></i> Comunicación efectiva</li>
-                <li><i class="fas fa-brain"></i> Facilidad de aprendizaje</li>
-                <li><i class="fas fa-puzzle-piece"></i> Resolución de problemas</li>
-                <li><i class="fas fa-chart-bar"></i> Análisis</li>
-            </ul>
-        </section>
+    <section class="section profile-section" id="perfil">
+      <div class="section-heading">
+        <p class="eyebrow">PERFIL</p>
+        <h2>De proyectos académicos a software demostrable.</h2>
+      </div>
 
-    </aside>
+      <div class="profile-grid">
+        <div class="profile-copy">
+          <p>
+            Soy estudiante de Ingeniería en Sistemas Computacionales con experiencia práctica
+            construyendo proyectos completos y documentados. Mi trabajo público incluye un
+            launcher nativo para Minecraft, una utilidad de optimización para Windows 11,
+            APIs modulares, aplicaciones web interactivas y un mod de cliente con Fabric.
+          </p>
+          <p>
+            Me interesa entender el problema antes de escribir código, mantener separadas la
+            lógica y la presentación, validar entradas, documentar límites y hacer que una
+            solución pueda probarse y mantenerse sin depender de explicaciones externas.
+          </p>
+        </div>
 
-    <!-- ===== PANEL DERECHO ===== -->
-    <main class="right-panel slide-in-right">
+        <div class="stack-panel">
+          <h3>Tecnologías que ya aparecen en mis repositorios</h3>
+          <div class="stack-list" aria-label="Tecnologías">
+            <span>C#</span><span>.NET</span><span>WPF</span><span>WebView2</span>
+            <span>React</span><span>TypeScript</span><span>Node.js</span><span>Express</span>
+            <span>Prisma</span><span>MySQL</span><span>SQLite</span><span>Java 21</span>
+            <span>Fabric</span><span>Gradle</span><span>HTML</span><span>CSS</span>
+            <span>JavaScript</span><span>Git</span><span>GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <header class="main-header">
-            <h1>Carlos Eduardo<br>Martínez Morales</h1>
-            <h2>Pasante en Ingeniería en Sistemas</h2>
-        </header>
+    <section class="section" id="proyectos">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">PROYECTOS</p>
+          <h2>Trabajo público seleccionado</h2>
+        </div>
+        <a class="text-link" href="https://github.com/jr-0205?tab=repositories" target="_blank" rel="noopener noreferrer">Ver todos los repositorios →</a>
+      </div>
 
-        <section class="content-section">
-            <h3>Perfil profesional</h3>
-            <p>
-                Estudiante de Ingeniería en Sistemas Computacionales próximo a egresar,
-                con conocimientos en programación, desarrollo web y administración básica
-                de sistemas Linux. Interesado en iniciar mi carrera profesional en TI,
-                aportando compromiso y capacidad de aprendizaje.
-            </p>
-        </section>
+      <div class="project-grid">
+        <article class="project-card project-featured">
+          <div class="project-topline">
+            <span>01 / DESKTOP</span>
+            <span>.NET 10 · React</span>
+          </div>
+          <h3>NEXA Client</h3>
+          <p>
+            Launcher nativo de Minecraft Java para Windows con host WPF/WebView2 e interfaz React.
+            Gestiona perfiles aislados, loaders, Java, contenido instalado, logs y presets sin Electron.
+          </p>
+          <ul class="project-points">
+            <li>Vanilla, Fabric, Forge y NeoForge.</li>
+            <li>Perfiles separados físicamente por GUID.</li>
+            <li>Instalador Windows x64 y pipeline de compilación.</li>
+          </ul>
+          <a href="https://github.com/jr-0205/NexoLauncher" target="_blank" rel="noopener noreferrer">Abrir repositorio →</a>
+        </article>
 
-        <section class="content-section">
-            <h3>Educación</h3>
-            <p><strong>Universidad Bancaria de México</strong> — 2023 / Actualidad</p>
-            <p>
-                Ingeniería en Sistemas Computacionales (UBAM, Teoloyucan),
-                formación en desarrollo de software, redes y sistemas distribuidos.
-            </p>
-        </section>
+        <article class="project-card">
+          <div class="project-topline">
+            <span>02 / WINDOWS</span>
+            <span>.NET 8 · WPF</span>
+          </div>
+          <h3>Windows 11 Optimizer</h3>
+          <p>
+            Utilidad de escritorio para medir y reducir actividad en segundo plano con cambios reversibles,
+            backup, perfiles de virtualización y una interfaz enfocada en claridad.
+          </p>
+          <a href="https://github.com/jr-0205/win11" target="_blank" rel="noopener noreferrer">Abrir repositorio →</a>
+        </article>
 
-        <section class="content-section">
-            <h3>Habilidades técnicas</h3>
-            <ul>
-                <li><i class="fas fa-code"></i> C, C++, C#, Java, JavaScript</li>
-                <li><i class="fab fa-html5"></i> HTML, CSS, Node.js</li>
-                <li><i class="fab fa-linux"></i> Linux (experiencia) · BSD (básico)</li>
-            </ul>
-        </section>
+        <article class="project-card">
+          <div class="project-topline">
+            <span>03 / BACKEND</span>
+            <span>TypeScript · Prisma</span>
+          </div>
+          <h3>AUT-INS API</h3>
+          <p>
+            Backend modular para admisión e inscripción escolar con Express, Prisma, MySQL,
+            contratos documentados, roles y una demo académica por áreas.
+          </p>
+          <a href="https://github.com/jr-0205/aut-ins-api" target="_blank" rel="noopener noreferrer">Abrir repositorio →</a>
+        </article>
 
-        <section class="content-section">
-            <h3>Experiencia</h3>
-            <p><strong>Prácticas — DIF Teoloyucan</strong></p>
-            <p>
-                Gestión administrativa, control de expedientes, reportes,
-                atención ciudadana y organización de apoyos sociales.
-            </p>
-        </section>
+        <article class="project-card">
+          <div class="project-topline">
+            <span>04 / API + WEB</span>
+            <span>Node.js · SQLite</span>
+          </div>
+          <h3>Comet Movies</h3>
+          <p>
+            API y catálogo visual con autenticación, perfiles, favoritos, roles, CRUD administrativo,
+            validación compartida y despliegue de demostración.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/jr-0205/api-prueba" target="_blank" rel="noopener noreferrer">Repositorio →</a>
+            <a href="https://api-prueba-9hox.onrender.com/" target="_blank" rel="noopener noreferrer">Demo →</a>
+          </div>
+        </article>
 
-        <section class="content-section">
-            <h3>Proyectos</h3>
-            <p><strong>API de Prueba</strong></p>
-            <p>
-                Un proyecto de API simple desarrollado para fines de prueba y demostración de habilidades en desarrollo web.
-                <br>
-                <i class="fab fa-github"></i> <a href="https://github.com/jr-0205/api-prueba" target="_blank">Repositorio en GitHub</a>
-                <br>
-                <i class="fas fa-external-link-alt"></i> <a href="https://api-prueba-9hox.onrender.com" target="_blank">Zona de prueba (Deploy en Render)</a>
-            </p>
-            <p>
-                Este proyecto utiliza tecnologías como JavaScript, HTML y CSS, y sirve como ejemplo de una API básica deployada en la nube.
-            </p>
-        </section>
+        <article class="project-card">
+          <div class="project-topline">
+            <span>05 / MODDING</span>
+            <span>Java 21 · Fabric</span>
+          </div>
+          <h3>CobbleSort</h3>
+          <p>
+            Mod de cliente para Minecraft 1.21.1 que ordena inventarios y contenedores,
+            prioriza objetos de Cobblemon y conserva intacta la barra rápida.
+          </p>
+          <a href="https://github.com/jr-0205/cobblesort" target="_blank" rel="noopener noreferrer">Abrir repositorio →</a>
+        </article>
 
-    </main>
-</div>
+        <article class="project-card">
+          <div class="project-topline">
+            <span>06 / FRONTEND</span>
+            <span>Canvas · JavaScript</span>
+          </div>
+          <h3>Mini-Skin Studio</h3>
+          <p>
+            Herramientas web para combinar skins, crear peluches y editar texturas 64×64
+            con procesamiento local, validación de archivos y vista interactiva.
+          </p>
+          <a href="https://github.com/jr-0205/skin" target="_blank" rel="noopener noreferrer">Abrir repositorio →</a>
+        </article>
 
-<!-- ================= MODAL CONTACTO ================= -->
-<div id="contactModal" class="modal">
-    <div class="modal-content modal-appear">
-        <span class="close" id="closeModal">&times;</span>
-        <h3>Contacto</h3>
+        <article class="project-card">
+          <div class="project-topline">
+            <span>07 / DATA TOOL</span>
+            <span>HTML · CSS · JS</span>
+          </div>
+          <h3>Grupos Huevo · Cobblemon</h3>
+          <p>
+            Guía local para consultar compatibilidad por grupos huevo, generaciones y Pokémon
+            de referencia con una interfaz responsive y datos cargados localmente.
+          </p>
+          <a href="https://github.com/jr-0205/grupo-huevo-cobblemon" target="_blank" rel="noopener noreferrer">Abrir repositorio →</a>
+        </article>
+      </div>
+    </section>
 
-        <form id="contactForm">
-            <input type="text" name="name" placeholder="Nombre completo" required>
-            <input type="email" name="email" placeholder="Correo electrónico" required>
-            <input type="text" name="subject" placeholder="Asunto" required>
-            <textarea name="message" placeholder="Mensaje" required></textarea>
+    <section class="section" id="trayectoria">
+      <div class="section-heading">
+        <p class="eyebrow">TRAYECTORIA</p>
+        <h2>Formación y experiencia</h2>
+      </div>
 
-            <button type="submit" id="submitBtn">Enviar mensaje</button>
-        </form>
+      <div class="timeline">
+        <article>
+          <span>2023 — Actualidad</span>
+          <div>
+            <h3>Ingeniería en Sistemas Computacionales</h3>
+            <p>Universidad Bancaria de México · Teoloyucan</p>
+            <p>Formación en desarrollo de software, redes, bases de datos y sistemas.</p>
+          </div>
+        </article>
 
-        <div id="formResponse"></div>
-    </div>
-</div>
+        <article>
+          <span>Prácticas</span>
+          <div>
+            <h3>DIF Teoloyucan</h3>
+            <p>Apoyo administrativo y operativo.</p>
+            <p>Control de expedientes, elaboración de reportes, atención y organización de información.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-<script src="javascript.js"></script>
+    <section class="section contact-section">
+      <div>
+        <p class="eyebrow">CONTACTO</p>
+        <h2>¿Tienes un proyecto, práctica o colaboración en mente?</h2>
+        <p>El formulario envía el mensaje directamente sin publicar datos de contacto sensibles en la página.</p>
+      </div>
+      <button type="button" class="button button-primary" data-open-contact>Enviar mensaje</button>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="currentYear"></span> Carlos Eduardo Martínez Morales</span>
+    <a href="https://github.com/jr-0205" target="_blank" rel="noopener noreferrer">@jr-0205</a>
+  </footer>
+
+  <div id="contactModal" class="modal" hidden>
+    <div class="modal-backdrop" data-close-contact></div>
+    <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="contactTitle" aria-describedby="contactDescription">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">CONTACTO</p>
+          <h2 id="contactTitle">Enviar un mensaje</h2>
+        </div>
+        <button type="button" class="modal-close" data-close-contact aria-label="Cerrar formulario">×</button>
+      </div>
+
+      <p id="contactDescription" class="modal-description">Completa los datos y enviaré el mensaje mediante EmailJS.</p>
+
+      <form id="contactForm">
+        <label>
+          <span>Nombre</span>
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          <span>Correo</span>
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          <span>Asunto</span>
+          <input type="text" name="subject" required>
+        </label>
+        <label>
+          <span>Mensaje</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <button type="submit" id="submitBtn" class="button button-primary">Enviar mensaje</button>
+        <p id="formResponse" class="form-response" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
 </body>
 </html>
